@@ -33,7 +33,7 @@
 
             var layout = {
                 title: 'Scores for depression',
-                xaxis: {range: [-4,12]
+                xaxis: {range: [0,100]
                         //tickformat: ',.0%'
                     }
             };
@@ -44,10 +44,10 @@
                 type: 'histogram',
                     xbins: {
                         //start: -3.6,
-                        start: -4,
+                        start: 0,
                         //end: 11.42,
-                        end: 12,
-                        size: 1
+                        end: 100,
+                        size: 10
                     },
                     histnorm: 'probability',
                     marker: {
