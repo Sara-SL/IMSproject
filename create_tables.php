@@ -5,6 +5,7 @@ include("connectDB.php");
 $sql = "SET FOREIGN_KEY_CHECKS = 0;";
 mysqli_query($link, $sql);
 
+/*
 // create the table of Users
 $sql = "DROP TABLE if exists Users;";
 if(mysqli_query($link, $sql)) {
@@ -29,7 +30,7 @@ if ($link->query($sql) === TRUE) {
 } else {
     echo "<br>Error creating table Users: " . $link->error;
 }
-
+*/
 // ----------------------------------------------------------------------------
 // create the table of Traits
 $sql = "DROP TABLE if exists Traits;";
@@ -102,31 +103,7 @@ if ($link->query($sql) === TRUE) {
 
 
 
-// ----------------------------------------------------------------------------
-// create the table of Answers
-$sql = "DROP TABLE if exists Answers;";
-
-         if(mysqli_query($link, $sql)) {
-            echo "<br>Table Answers is deleted successfully";
-         } else {
-            echo "<br>Table Answers is not deleted successfully";
-         }
-
-// sql to create table
-$sql = "CREATE TABLE Answers (
-  user_id INT(32) NOT NULL,
-  trait_id INT(32) NOT NULL,
-  answer BOOLEAN NOT NULL,
-  FOREIGN KEY (trait_id) REFERENCES Traits(id),
-  FOREIGN KEY (user_id) REFERENCES Users(id)
-)";
-
-if ($link->query($sql) === TRUE) {
-    echo "<br>Table Answers created successfully";
-} else {
-    echo "<br>Error creating table Answers: " . $link->error;
-}
-
+/*
 // ----------------------------------------------------------------------------
 // create the table of Results
 $sql = "DROP TABLE if exists Results;";
@@ -151,6 +128,6 @@ if ($link->query($sql) === TRUE) {
 } else {
     echo "<br>Error creating table Results: " . $link->error;
 }
-
+*/
 include("disconnectDB.php");
 ?>

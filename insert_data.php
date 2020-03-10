@@ -109,5 +109,19 @@ mysqli_query($link, $sql);
           echo "<br>Data: Correlations inserted successfully";
       } else {
           echo "<br>Error inserting Correlations data " . $link->error;
+
+          //--------------------------------------------------------
+      //----------- insert into the Results table ---------------
+      //--------------------------------------------------------
+      $sql = "INSERT into Results (user_id, disease_id, result)
+           values (1,1,'brandonchen2932@outlook.com','$2y$09$GGyRfaW6rVaNTPxrXD4EN.dm0e0Sn8EwcGtDrTvTdbsk6Fq.SKlRm',0,'Zq$GMJBF9aK8sYvIePH(','2020-03-08 14:07:48')
+           ;";
+
+        if ($link->query($sql) === TRUE) {
+            echo "<br>Data: Users inserted successfully";
+        } else {
+            echo "<br>Error inserting Users data " . $link->error;
+
+
 include("disconnectDB.php");
 }?>
