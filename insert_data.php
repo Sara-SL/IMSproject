@@ -63,22 +63,17 @@ mysqli_query($link, $sql);
          values
          (1,'Depression','You are unfortuantely at high risk of getting Depression.
          Please be aware of the seriousness of this. Please consult a Psychologist
-         right away if you\' done the test seriously. We as programmers all have
+         right away if you\'ve done the test seriously. We as programmers all have
          suffered from burnt out and vallies of our lives. But keep in mind that
-         depression is treatable. You just need some help to get up again. Try
-         hug your firends, hug your family members. Go meet people, let your self
-         open for a while. Things can get back together after all. Based on our
-         knowledge, the best solustion is still counseling a psychotherapist, who
-         is professional and experienced. You\'ll probably find them the best
-         people who could understand you.'),(2,'Diabetes','You are unfortuantely
+         depression is treatable. '),(2,'Diabetes','You are unfortuantely
          at high risk of getting Diabetes. here\'s the sugeestion: 1. Go to consult
-         a doctor, since our body is really conplex, simple test as ours are not
+         a doctor, since our body is really complex, simple test as ours are not
          accurate sometimes and you can get more information regarding this disease
          from the doctor. 2. Get at least 150 minutes per week of aerobic exercise,
          such as walking or cycling. 3. Cut saturated and trans fats, along with
          refined carbohydrates, out of your diet. 4. Eat more fruits, vegetables,
-         and whole grains. 5. Eat smaller portions. 6. Try to lose 7 percentTrusted
-         Source of your body weight if you’re overweight or obese.');";
+         and whole grains. 5. Eat smaller portions. 6. Try to lose 7 percent of
+         your body weight if you’re overweight or obese.');";
 
        if ($link->query($sql) === TRUE) {
            echo "<br>Data: Diseases inserted successfully";
@@ -110,7 +105,7 @@ mysqli_query($link, $sql);
       } else {
           echo "<br>Error inserting Correlations data " . $link->error;
 
-        
+
 
 include("disconnectDB.php");
 }?>
