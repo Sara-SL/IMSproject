@@ -36,7 +36,7 @@ $length = $n_rows;
           <div class="clr"></div>
           <div class="logo">
             <h1><a href="questionnaire_mobile.php">F2FD<br />
-              <small>Faster genetic prediction for everyone</small></a></h1>
+              <small>Faster phenotypic prediction for everyone</small></a></h1>
           </div>
           <div class="clr"></div>
           <img src="images/image.jpg" width="930" height="160" alt="" />
