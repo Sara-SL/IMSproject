@@ -5,7 +5,7 @@
 $_SESSION['choice']=$_GET['choice'];
 $disease_chosen = $_SESSION['choice'];
 
-$result = mysqli_query($link,"SELECT disease_name, Traits.id, question, rg
+$result = mysqli_query($link,"SELECT DISTINCT disease_name, Traits.id, question, rg
                               from Diseases, Traits, Correlations
                               where Diseases.id = disease_id
                               and Traits.id = trait_id
@@ -14,7 +14,7 @@ $result = mysqli_query($link,"SELECT disease_name, Traits.id, question, rg
 
 for($i = 0; $i < mysqli_num_rows($result) + 1; $i++) {
 
-   ${"result$i"} = mysqli_query($link,"SELECT disease_name, Traits.id, question, rg
+   ${"result$i"} = mysqli_query($link,"SELECT DISTINCT disease_name, Traits.id, question, rg
    from Diseases, Traits, Correlations
    where Diseases.id = disease_id and Traits.id = trait_id and disease_name = '{$disease_chosen}'
 	 order by Traits.id
